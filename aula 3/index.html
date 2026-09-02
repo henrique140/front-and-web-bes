@@ -11,14 +11,22 @@
         <main>
             <section>
                 <h2>cadastre o seu curriculo</h2>
-                <form action="#" method="post">
+                <form action="https://postman-echo.com/post" method="post">
                     <p>prencha o formulario abaixo para se canditar a vaga</p>
                     <fieldset>
                         <legend>Dados pessoais</legend>
                         <div>
+                            <!-- campo novo de foto -->
+                             <label for="foto_id">foto:</label>
+                             <input id="foto_id" name="foto" type="file" accept="image/*">
+                        </div>
+                        <div>
+                            
+                        </div>
+                        <div>
 
                         <label for="nome_id">nome completo</label>
-                        <input id ="nome_nome" name="nome" type="text">
+                        <input id ="nome_id" name="nome" type="text">
                         </div>
 
                         <div>
@@ -46,8 +54,8 @@
                             <input id="cidades" name="cidades" type="text">
                         </div>
                         <div>
-                            <label for"numero_id">numero:</label>
-                            <input id="numero_id" name:"numero" type="number">
+                            <label for="numero_id">numero:</label>
+                            <input id="numero_id" name="numero" type="number">
                             </div>
                     </fieldset>
                     <fieldset>
