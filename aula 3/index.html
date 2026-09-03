@@ -11,7 +11,7 @@
         <main>
             <section>
                 <h2>cadastre o seu curriculo</h2>
-                <form action="https://postman-echo.com/post" method="post">
+                <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
                     <p>prencha o formulario abaixo para se canditar a vaga</p>
                     <fieldset>
                         <legend>Dados pessoais</legend>
@@ -20,18 +20,16 @@
                              <label for="foto_id">foto:</label>
                              <input id="foto_id" name="foto" type="file" accept="image/*">
                         </div>
-                        <div>
-                            
-                        </div>
+                        
                         <div>
 
                         <label for="nome_id">nome completo</label>
-                        <input id ="nome_id" name="nome" type="text">
+                        <input id ="nome_id" name="nome" type="text" placeholder="nicolas henrique pintudo">
                         </div>
 
                         <div>
                         <label for="telefone_id">Telefone:</label>
-                        <input id="telefone_id" name ="telefone" type="tel">
+                        <input id="telefone_id" name ="telefone" type="tel" required>
                         </div>
                         
                         <div>
