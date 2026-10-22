@@ -25,13 +25,34 @@ footer p {
 
 }
 
-input[type = "text"],
-input[type="numeber"]
-input[type="email"]{
+label {
+    display: block;
+    margin-top: 1.2rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    padding: 1rem 2rem;
+    margin-top: 1.6rem;
+    width: 100%;
+}
+
+button {
     padding: 1rem 2rem;
     margin-top: 1.6rem;
 }
 
 .oculto{
-    
+    display: none;
+    }
+
+.sucesso {
+    background-color: #ffe08a;
+    font-weight: bold;
+    }
+
+.erro {
+    color: #8a1c1c;
+    background-color: #ffe6e6;
 }
