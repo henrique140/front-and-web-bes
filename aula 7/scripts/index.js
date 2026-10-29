@@ -27,23 +27,36 @@ function executar(evento) {
   // TODO: ADICIONAR VALIDAR UM E-MAIL UTILIZANDO UM REGEX
   const email = document.querySelector("#email");
   const erroEmail = document.querySelector("#erro-email");
+  const REGEX = /^[a-zA-Z1-9._%+-]+@[a-zA-Z1-9._%+-]+\.[a-zA-Z]{2,}$/;
+  
   if (email.value === "") {
     erroEmail.textContent = "Email Não pode estar vazio!";
     erroEmail.classList.add("erro");
     erroEmail.classList.remove("oculto");
-  } 
-    const termos = document.querySelector('#termos');
-    const erroTermos = document.querySelector('#erro-termos');
-    if (!termos.checked) {
-        erroTermos.textContent = 'Você deve aceitar os termos';
-        erroTermos.classList.add("erro");
-        erroTermos.classList.remove("oculto");
-        }
-    else {
-        concluido.textContent = 'Formulário enviado com sucesso!';
-        concluido.classList.add("sucesso");
-        concluido.classList.remove("oculto");
-    }
+  } else if(!REGEX.test(email.value)) {
+    alert("REGEX");
+  }
+
+
+  const termos = document.querySelector('#termos');
+  const erroTermos = document.querySelector('#erro-termos');
+  if (!termos.checked) {
+      erroTermos.textContent = 'Você deve aceitar os termos';
+      erroTermos.classList.add("erro");
+      erroTermos.classList.remove("oculto");
+  }
+
+
+  const valido = document.querySelectorAll(".erro").length === 0;
+  if (valido) {
+    concluido.textContent = 'Formulário enviado com sucesso!';
+    concluido.classList.add("sucesso");
+    concluido.classList.remove("oculto");
+  } else {
+    concluido.textContent = 'Corrija antes de seguir!';
+    concluido.classList.add("erro");
+    concluido.classList.remove("oculto");
+  }
 
 
 }
