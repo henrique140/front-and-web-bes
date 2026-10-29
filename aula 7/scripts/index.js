@@ -34,7 +34,9 @@ function executar(evento) {
     erroEmail.classList.add("erro");
     erroEmail.classList.remove("oculto");
   } else if(!REGEX.test(email.value)) {
-    alert("REGEX");
+    erroEmail.textContent = "COLOQUE UM EMAIL VALIDO!";
+    erroEmail.classList.add("erro");
+    erroEmail.classList.remove("oculto");
   }
 
 
